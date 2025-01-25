@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto registration(UserDto userDto) {
-        if (userRepository.findByPhoneNumber(
+        if (userRepository.findByPhoneNumberAndVisibleTrue(
                 userDto.getPhoneNumber()).isPresent()) return null;
         User user = new User();
         user.setFirstname(userDto.getFirstname());
