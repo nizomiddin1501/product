@@ -1,0 +1,1999 @@
+{
+	"info": {
+		"_postman_id": "8094669d-0af9-4571-b5c6-9baf2b0d3e4f",
+		"name": "OpenAPI definition Copy 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15392187"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get Product by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieve a product by their unique identifier."
+									},
+									"response": [
+										{
+											"name": "Successfully retrieved the product.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"manufacturedDate\": \"<date>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"productStatusDto\": {\n      \"createdAt\": \"<dateTime>\",\n      \"quantity\": \"<integer>\",\n      \"statusName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"productStatusId\": \"<long>\",\n    \"productTypeDto\": {\n      \"isDigital\": \"<boolean>\",\n      \"typeName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"description\": \"<string>\"\n    },\n    \"productTypeId\": \"<long>\",\n    \"id\": \"<long>\",\n    \"expiryDate\": \"<date>\",\n    \"image\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Product not found.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"manufacturedDate\": \"<date>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"productStatusDto\": {\n      \"createdAt\": \"<dateTime>\",\n      \"quantity\": \"<integer>\",\n      \"statusName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"productStatusId\": \"<long>\",\n    \"productTypeDto\": {\n      \"isDigital\": \"<boolean>\",\n      \"typeName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"description\": \"<string>\"\n    },\n    \"productTypeId\": \"<long>\",\n    \"id\": \"<long>\",\n    \"expiryDate\": \"<date>\",\n    \"image\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Update product",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"manufacturedDate\": \"<date>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"productStatusDto\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  },\n  \"productStatusId\": \"<long>\",\n  \"productTypeDto\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  },\n  \"productTypeId\": \"<long>\",\n  \"id\": \"<long>\",\n  \"expiryDate\": \"<date>\",\n  \"image\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Update the details of an existing product."
+									},
+									"response": [
+										{
+											"name": "Product updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"manufacturedDate\": \"<date>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"productStatusDto\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  },\n  \"productStatusId\": \"<long>\",\n  \"productTypeDto\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  },\n  \"productTypeId\": \"<long>\",\n  \"id\": \"<long>\",\n  \"expiryDate\": \"<date>\",\n  \"image\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"manufacturedDate\": \"<date>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"productStatusDto\": {\n      \"createdAt\": \"<dateTime>\",\n      \"quantity\": \"<integer>\",\n      \"statusName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"productStatusId\": \"<long>\",\n    \"productTypeDto\": {\n      \"isDigital\": \"<boolean>\",\n      \"typeName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"description\": \"<string>\"\n    },\n    \"productTypeId\": \"<long>\",\n    \"id\": \"<long>\",\n    \"expiryDate\": \"<date>\",\n    \"image\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Product not found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"manufacturedDate\": \"<date>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"productStatusDto\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  },\n  \"productStatusId\": \"<long>\",\n  \"productTypeDto\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  },\n  \"productTypeId\": \"<long>\",\n  \"id\": \"<long>\",\n  \"expiryDate\": \"<date>\",\n  \"image\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"manufacturedDate\": \"<date>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"productStatusDto\": {\n      \"createdAt\": \"<dateTime>\",\n      \"quantity\": \"<integer>\",\n      \"statusName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"productStatusId\": \"<long>\",\n    \"productTypeDto\": {\n      \"isDigital\": \"<boolean>\",\n      \"typeName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"description\": \"<string>\"\n    },\n    \"productTypeId\": \"<long>\",\n    \"id\": \"<long>\",\n    \"expiryDate\": \"<date>\",\n    \"image\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete Product",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Delete a product by its ID."
+									},
+									"response": [
+										{
+											"name": "Product deleted successfully.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+										},
+										{
+											"name": "Product not found.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get all Products with Pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/products?page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								},
+								"description": "Retrieve a paginated list of all products."
+							},
+							"response": [
+								{
+									"name": "Successfully retrieved the list of products.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/products?page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"totalPages\": \"<integer>\",\n    \"totalElements\": \"<long>\",\n    \"size\": \"<integer>\",\n    \"content\": [\n      {\n        \"manufacturedDate\": \"<date>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"productStatusDto\": {\n          \"createdAt\": \"<dateTime>\",\n          \"quantity\": \"<integer>\",\n          \"statusName\": \"<string>\",\n          \"id\": \"<long>\",\n          \"updatedAt\": \"<dateTime>\"\n        },\n        \"productStatusId\": \"<long>\",\n        \"productTypeDto\": {\n          \"isDigital\": \"<boolean>\",\n          \"typeName\": \"<string>\",\n          \"id\": \"<long>\",\n          \"description\": \"<string>\"\n        },\n        \"productTypeId\": \"<long>\",\n        \"id\": \"<long>\",\n        \"expiryDate\": \"<date>\",\n        \"image\": \"<string>\"\n      },\n      {\n        \"manufacturedDate\": \"<date>\",\n        \"name\": \"<string>\",\n        \"price\": \"<double>\",\n        \"productStatusDto\": {\n          \"createdAt\": \"<dateTime>\",\n          \"quantity\": \"<integer>\",\n          \"statusName\": \"<string>\",\n          \"id\": \"<long>\",\n          \"updatedAt\": \"<dateTime>\"\n        },\n        \"productStatusId\": \"<long>\",\n        \"productTypeDto\": {\n          \"isDigital\": \"<boolean>\",\n          \"typeName\": \"<string>\",\n          \"id\": \"<long>\",\n          \"description\": \"<string>\"\n        },\n        \"productTypeId\": \"<long>\",\n        \"id\": \"<long>\",\n        \"expiryDate\": \"<date>\",\n        \"image\": \"<string>\"\n      }\n    ],\n    \"number\": \"<integer>\",\n    \"sort\": {\n      \"empty\": \"<boolean>\",\n      \"sorted\": \"<boolean>\",\n      \"unsorted\": \"<boolean>\"\n    },\n    \"first\": \"<boolean>\",\n    \"last\": \"<boolean>\",\n    \"numberOfElements\": \"<integer>\",\n    \"pageable\": {\n      \"offset\": \"<long>\",\n      \"sort\": {\n        \"empty\": \"<boolean>\",\n        \"sorted\": \"<boolean>\",\n        \"unsorted\": \"<boolean>\"\n      },\n      \"paged\": \"<boolean>\",\n      \"pageNumber\": \"<integer>\",\n      \"pageSize\": \"<integer>\",\n      \"unpaged\": \"<boolean>\"\n    },\n    \"empty\": \"<boolean>\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create a new Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"manufacturedDate\": \"<date>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"productStatusDto\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  },\n  \"productStatusId\": \"<long>\",\n  \"productTypeDto\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  },\n  \"productTypeId\": \"<long>\",\n  \"id\": \"<long>\",\n  \"expiryDate\": \"<date>\",\n  \"image\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								},
+								"description": "Create a new product record."
+							},
+							"response": [
+								{
+									"name": "Product created successfully.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"manufacturedDate\": \"<date>\",\n  \"name\": \"<string>\",\n  \"price\": \"<double>\",\n  \"productStatusDto\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  },\n  \"productStatusId\": \"<long>\",\n  \"productTypeDto\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  },\n  \"productTypeId\": \"<long>\",\n  \"id\": \"<long>\",\n  \"expiryDate\": \"<date>\",\n  \"image\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/products",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"products"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"manufacturedDate\": \"<date>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"productStatusDto\": {\n      \"createdAt\": \"<dateTime>\",\n      \"quantity\": \"<integer>\",\n      \"statusName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"productStatusId\": \"<long>\",\n    \"productTypeDto\": {\n      \"isDigital\": \"<boolean>\",\n      \"typeName\": \"<string>\",\n      \"id\": \"<long>\",\n      \"description\": \"<string>\"\n    },\n    \"productTypeId\": \"<long>\",\n    \"id\": \"<long>\",\n    \"expiryDate\": \"<date>\",\n    \"image\": \"<string>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "productTypes",
+					"item": [
+						{
+							"name": "edit",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Update productType",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"isDigital\": \"<boolean>\",\n  \"typeName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"description\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/productTypes/edit/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productTypes",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Update the details of an existing productType."
+											},
+											"response": [
+												{
+													"name": "ProductType updated successfully",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"isDigital\": \"<boolean>\",\n  \"typeName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"description\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/productTypes/edit/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productTypes",
+																"edit",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  }\n}"
+												},
+												{
+													"name": "ProductType not found",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"isDigital\": \"<boolean>\",\n  \"typeName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"description\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/productTypes/edit/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productTypes",
+																"edit",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  }\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "add",
+							"item": [
+								{
+									"name": "Create a new ProductType",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"isDigital\": \"<boolean>\",\n  \"typeName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"description\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/productTypes/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"productTypes",
+												"add"
+											]
+										},
+										"description": "Create a new productType record."
+									},
+									"response": [
+										{
+											"name": "ProductType created successfully.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"isDigital\": \"<boolean>\",\n  \"typeName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"description\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/productTypes/add",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productTypes",
+														"add"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get ProductType by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/productTypes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"productTypes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieve a productType by their unique identifier."
+									},
+									"response": [
+										{
+											"name": "Successfully retrieved the productType.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/productTypes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productTypes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "ProductType not found.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/productTypes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productTypes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"isDigital\": \"<boolean>\",\n    \"typeName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"description\": \"<string>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Delete ProductType",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/productTypes/delete/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productTypes",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Delete a productType by its ID."
+											},
+											"response": [
+												{
+													"name": "ProductType deleted successfully.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/productTypes/delete/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productTypes",
+																"delete",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+												},
+												{
+													"name": "ProductType not found.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/productTypes/delete/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productTypes",
+																"delete",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get all ProductTypes with Pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/productTypes?page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"productTypes"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								},
+								"description": "Retrieve a paginated list of all productTypes."
+							},
+							"response": [
+								{
+									"name": "Successfully retrieved the list of productTypes.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/productTypes?page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"productTypes"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"totalPages\": \"<integer>\",\n    \"totalElements\": \"<long>\",\n    \"size\": \"<integer>\",\n    \"content\": [\n      {\n        \"isDigital\": \"<boolean>\",\n        \"typeName\": \"<string>\",\n        \"id\": \"<long>\",\n        \"description\": \"<string>\"\n      },\n      {\n        \"isDigital\": \"<boolean>\",\n        \"typeName\": \"<string>\",\n        \"id\": \"<long>\",\n        \"description\": \"<string>\"\n      }\n    ],\n    \"number\": \"<integer>\",\n    \"sort\": {\n      \"empty\": \"<boolean>\",\n      \"sorted\": \"<boolean>\",\n      \"unsorted\": \"<boolean>\"\n    },\n    \"first\": \"<boolean>\",\n    \"last\": \"<boolean>\",\n    \"numberOfElements\": \"<integer>\",\n    \"pageable\": {\n      \"offset\": \"<long>\",\n      \"sort\": {\n        \"empty\": \"<boolean>\",\n        \"sorted\": \"<boolean>\",\n        \"unsorted\": \"<boolean>\"\n      },\n      \"paged\": \"<boolean>\",\n      \"pageNumber\": \"<integer>\",\n      \"pageSize\": \"<integer>\",\n      \"unpaged\": \"<boolean>\"\n    },\n    \"empty\": \"<boolean>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "productStatuses",
+					"item": [
+						{
+							"name": "edit",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Update productStatus",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"createdAt\": \"<dateTime>\",\n  \"quantity\": \"<integer>\",\n  \"statusName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/productStatuses/edit/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productStatuses",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Update the details of an existing productStatus."
+											},
+											"response": [
+												{
+													"name": "ProductStatus updated successfully",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"createdAt\": \"<dateTime>\",\n  \"quantity\": \"<integer>\",\n  \"statusName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/productStatuses/edit/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productStatuses",
+																"edit",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  }\n}"
+												},
+												{
+													"name": "ProductStatus not found",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"createdAt\": \"<dateTime>\",\n  \"quantity\": \"<integer>\",\n  \"statusName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/productStatuses/edit/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productStatuses",
+																"edit",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  }\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "add",
+							"item": [
+								{
+									"name": "Create a new ProductStatus",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"createdAt\": \"<dateTime>\",\n  \"quantity\": \"<integer>\",\n  \"statusName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/productStatuses/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"productStatuses",
+												"add"
+											]
+										},
+										"description": "Create a new productStatus record."
+									},
+									"response": [
+										{
+											"name": "ProductStatus created successfully.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"createdAt\": \"<dateTime>\",\n  \"quantity\": \"<integer>\",\n  \"statusName\": \"<string>\",\n  \"id\": \"<long>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/productStatuses/add",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productStatuses",
+														"add"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get ProductStatus by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/productStatuses/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"productStatuses",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieve a productStatus by their unique identifier."
+									},
+									"response": [
+										{
+											"name": "Successfully retrieved the productStatus.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/productStatuses/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productStatuses",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  }\n}"
+										},
+										{
+											"name": "ProductStatus not found.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/productStatuses/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productStatuses",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"createdAt\": \"<dateTime>\",\n    \"quantity\": \"<integer>\",\n    \"statusName\": \"<string>\",\n    \"id\": \"<long>\",\n    \"updatedAt\": \"<dateTime>\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Delete ProductStatus",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/productStatuses/delete/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"productStatuses",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<long>",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Delete a productStatus by its ID."
+											},
+											"response": [
+												{
+													"name": "ProductStatus deleted successfully.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/productStatuses/delete/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productStatuses",
+																"delete",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+												},
+												{
+													"name": "ProductStatus not found.",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/productStatuses/delete/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"productStatuses",
+																"delete",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get all ProductStatuses with Pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/productStatuses?page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"productStatuses"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								},
+								"description": "Retrieve a paginated list of all productStatuses."
+							},
+							"response": [
+								{
+									"name": "Successfully retrieved the list of productStatuses.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/productStatuses?page=0&size=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"productStatuses"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {\n    \"totalPages\": \"<integer>\",\n    \"totalElements\": \"<long>\",\n    \"size\": \"<integer>\",\n    \"content\": [\n      {\n        \"createdAt\": \"<dateTime>\",\n        \"quantity\": \"<integer>\",\n        \"statusName\": \"<string>\",\n        \"id\": \"<long>\",\n        \"updatedAt\": \"<dateTime>\"\n      },\n      {\n        \"createdAt\": \"<dateTime>\",\n        \"quantity\": \"<integer>\",\n        \"statusName\": \"<string>\",\n        \"id\": \"<long>\",\n        \"updatedAt\": \"<dateTime>\"\n      }\n    ],\n    \"number\": \"<integer>\",\n    \"sort\": {\n      \"empty\": \"<boolean>\",\n      \"sorted\": \"<boolean>\",\n      \"unsorted\": \"<boolean>\"\n    },\n    \"first\": \"<boolean>\",\n    \"last\": \"<boolean>\",\n    \"numberOfElements\": \"<integer>\",\n    \"pageable\": {\n      \"offset\": \"<long>\",\n      \"sort\": {\n        \"empty\": \"<boolean>\",\n        \"sorted\": \"<boolean>\",\n        \"unsorted\": \"<boolean>\"\n      },\n      \"paged\": \"<boolean>\",\n      \"pageNumber\": \"<integer>\",\n      \"pageSize\": \"<integer>\",\n      \"unpaged\": \"<boolean>\"\n    },\n    \"empty\": \"<boolean>\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "files",
+					"item": [
+						{
+							"name": "download",
+							"item": [
+								{
+									"name": "pdf",
+									"item": [
+										{
+											"name": "{productId}",
+											"item": [
+												{
+													"name": "download PDF",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/files/download/pdf/:productId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"files",
+																"download",
+																"pdf",
+																":productId"
+															],
+															"variable": [
+																{
+																	"key": "productId",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/files/download/pdf/:productId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"files",
+																		"download",
+																		"pdf",
+																		":productId"
+																	],
+																	"variable": [
+																		{
+																			"key": "productId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "excel",
+									"item": [
+										{
+											"name": "{productId}",
+											"item": [
+												{
+													"name": "download Excel",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/files/download/excel/:productId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"files",
+																"download",
+																"excel",
+																":productId"
+															],
+															"variable": [
+																{
+																	"key": "productId",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/files/download/excel/:productId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"files",
+																		"download",
+																		"excel",
+																		":productId"
+																	],
+																	"variable": [
+																		{
+																			"key": "productId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "csv",
+									"item": [
+										{
+											"name": "{productId}",
+											"item": [
+												{
+													"name": "download CSV",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/files/download/csv/:productId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"files",
+																"download",
+																"csv",
+																":productId"
+															],
+															"variable": [
+																{
+																	"key": "productId",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/files/download/csv/:productId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"files",
+																		"download",
+																		"csv",
+																		":productId"
+																	],
+																	"variable": [
+																		{
+																			"key": "productId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\",\n  \"data\": {}\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

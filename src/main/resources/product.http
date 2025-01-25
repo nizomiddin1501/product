@@ -1,0 +1,35 @@
+
+
+###
+GET http://localhost:8080/api/products?
+    page={{$random.integer(100)}}&
+    size={{$random.integer(100)}}
+
+###
+GET http://localhost:8080/api/products/{{id}}
+Content-Type: application/json
+
+
+###
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Authorization: Basic OTA1OTY5MTY3OjEyMzQ=
+
+{
+  "id": 1,
+  "name": "",
+  "price": 0,
+  "manufacturedDate": "",
+  "expiryDate": "",
+  "image": "",
+  "productTypeDto": {},
+  "productTypeId": 0,
+  "productStatusId": 0
+}
+
+
+###
+PUT http://localhost:8080/api/products/{{id}}
+
+###
+DELETE http://localhost:8080/api/products/{{id}}

@@ -1,0 +1,32 @@
+
+
+###
+GET http://localhost:8080/api/product-statuses?
+    page={{$placeholder}}&
+    size={{$placeholder}}
+
+###
+GET http://localhost:8080/api/product-statuses/2
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/productStatuses
+Content-Type: application/json
+
+{
+  "id": 0,
+  "statusName": "",
+  "quantity": 0,
+  "createdAt": "",
+  "updatedAt": "",
+  "productDto": {}
+}
+
+###
+PUT http://localhost:8080/api/productStatuses/{{id}}
+Content-Type: application/json
+
+
+###
+DELETE http://localhost:8080/api/productStatuses/{{id}}
+

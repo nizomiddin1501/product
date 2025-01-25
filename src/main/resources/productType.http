@@ -1,0 +1,35 @@
+
+###
+GET http://localhost:8080/api/product-types?
+    page={{$random.integer(100)}}&
+    size={{$random.integer(100)}}
+
+###
+GET http://localhost:8080/api/product-types/{{id}}
+
+###
+POST http://localhost:8080/api/product-types
+Content-Type: application/json
+Authorization: Basic OTA1OTY5MTY3OjEyMzQ=
+
+{
+  "id": 1,
+  "typeName": "Electronics",
+  "description": "Electron mahsulot xitoyniki.",
+  "isDigital": true
+}
+
+###
+PUT http://localhost:8080/api/product-types/{{id}}
+Content-Type: application/json
+
+{
+  "id": 0,
+  "typeName": "",
+  "description": "",
+  "isDigital": false
+}
+
+
+###
+DELETE http://localhost:8080/api/product-types/{{id}}

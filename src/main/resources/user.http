@@ -1,0 +1,42 @@
+###
+GET http://localhost:8080/api/products?
+    page={{$random.integer(100)}}&
+    size={{$random.integer(100)}}
+
+<> 2025-01-23T103050.200.json
+
+###
+GET http://localhost:8080/api/products/4
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "",
+  "price": 0,
+  "manufacturedDate": "",
+  "expiryDate": "",
+  "image": "",
+  "productTypeDto": {},
+  "productTypeId": 0,
+  "productStatusId": 0
+}
+
+<> 2025-01-23T104605.404.json
+<> 2025-01-23T103200.200.json
+
+###
+DELETE http://localhost:8080/api/products/delete/4
+Authorization: Basic bWF6Z2k6MTIzNA==
+
+
+### Create User
+POST http://localhost:8080/api/users/registration
+Content-Type: application/json
+
+{
+  "firstname": "Javohir",
+  "lastname": "Holdorov",
+  "phoneNumber": "932345617",
+  "password": "1234",
+  "role": "ADMIN"
+}
